@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#070a12" />
+  <meta name="description" content="Gridiron Guide support, FAQs, troubleshooting, and contact information." />
+  <title>Gridiron Guide Support</title>
+
+  <style>
+    :root{
+      --bg:#070a12;
+      --panel:#0f1624;
+      --panel-2:#121c2d;
+      --text:#f7f9ff;
+      --muted:#aab4c8;
+      --line:rgba(255,255,255,.12);
+      --accent:#53b7ff;
+      --green:#6affb7;
+      --shadow:0 18px 50px rgba(0,0,0,.32);
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at 15% -8%,rgba(83,183,255,.18),transparent 32%),
+        radial-gradient(circle at 88% 2%,rgba(106,255,183,.10),transparent 28%),
+        linear-gradient(180deg,#070a12 0%,#0a0f19 52%,#05070d 100%);
+      line-height:1.55;
+    }
+
+    a{color:#9ed8ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{
+      width:min(920px,calc(100% - 28px));
+      margin:0 auto;
+      padding:32px 0 56px;
+    }
+
+    .hero{
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:28px;
+      background:
+        radial-gradient(circle at 100% 0%,rgba(83,183,255,.16),transparent 36%),
+        linear-gradient(155deg,rgba(18,28,45,.98),rgba(8,12,22,.98));
+      box-shadow:var(--shadow);
+    }
+
+    .brand{
+      margin:0 0 10px;
+      font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Black",sans-serif;
+      font-size:clamp(2rem,8vw,4rem);
+      font-weight:900;
+      letter-spacing:.025em;
+      line-height:.92;
+      text-transform:uppercase;
+    }
+
+    .brand .guide{opacity:.82}
+
+    .eyebrow{
+      color:var(--green);
+      font-size:.72rem;
+      font-weight:1000;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    h2{
+      margin:0 0 10px;
+      font-size:1.05rem;
+      letter-spacing:-.01em;
+    }
+
+    p{margin:0 0 12px}
+
+    .hero-copy{
+      max-width:680px;
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 15px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      font-weight:900;
+      font-size:.84rem;
+      text-decoration:none !important;
+    }
+
+    .btn.primary{
+      color:#07111d;
+      background:linear-gradient(135deg,var(--green),var(--accent));
+      border-color:transparent;
+    }
+
+    .btn.secondary{
+      color:var(--text);
+      background:rgba(255,255,255,.06);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+      background:linear-gradient(180deg,rgba(17,24,39,.96),rgba(9,13,23,.98));
+      box-shadow:0 12px 36px rgba(0,0,0,.18);
+    }
+
+    .card p,
+    .card li{color:var(--muted)}
+
+    .card ul{
+      margin:8px 0 0;
+      padding-left:20px;
+    }
+
+    .faq{
+      margin-top:16px;
+    }
+
+    details{
+      border-top:1px solid var(--line);
+      padding:14px 0;
+    }
+
+    details:first-of-type{border-top:0}
+
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      color:var(--text);
+    }
+
+    details p{
+      margin:9px 0 0;
+      color:var(--muted);
+    }
+
+    .note{
+      margin-top:16px;
+      border:1px solid rgba(83,183,255,.24);
+      border-radius:16px;
+      padding:14px 15px;
+      background:rgba(83,183,255,.07);
+      color:var(--muted);
+      font-size:.88rem;
+    }
+
+    .contact{
+      margin-top:16px;
+      text-align:center;
+      padding:24px 18px;
+    }
+
+    .contact strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:1.05rem;
+    }
+
+    .contact code{
+      display:inline-block;
+      margin-top:8px;
+      padding:5px 8px;
+      border-radius:8px;
+      color:#fff;
+      background:rgba(255,255,255,.07);
+      border:1px solid var(--line);
+    }
+
+    footer{
+      margin-top:22px;
+      color:#7f899d;
+      font-size:.75rem;
+      text-align:center;
+    }
+
+    @media(max-width:700px){
+      .grid{grid-template-columns:1fr}
+      .hero{padding:22px}
+      .wrap{padding-top:18px}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Support</div>
+      <h1 class="brand"><span>GRIDIRON</span><span class="guide"> GUIDE</span></h1>
+      <p class="hero-copy">
+        Need help with Gridiron Guide? Find answers to common questions below,
+        troubleshoot local broadcast detection, or contact the developer for support.
+      </p>
+
+      <div class="actions">
+        <!-- Replace YOUR_EMAIL@example.com before publishing -->
+        <a class="btn primary" href="mailto:YOUR_EMAIL@example.com?subject=Gridiron%20Guide%20Support">Contact Support</a>
+        <a class="btn secondary" href="#faq">View FAQs</a>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Support topics">
+      <article class="card">
+        <h2>Where to Watch</h2>
+        <p>
+          Gridiron Guide shows known TV networks and streaming providers for NFL games.
+          Tap <strong>Watch</strong> to open a supported provider app or website when available.
+        </p>
+        <p>
+          Provider access may require a separate subscription, TV package, or account.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Local TV Market</h2>
+        <p>
+          Local CBS and FOX availability can depend on your TV market.
+          Open <strong>Settings → Location &amp; DIRECTV</strong> and either:
+        </p>
+        <ul>
+          <li>Enter your 5-digit ZIP code, or</li>
+          <li>Tap <strong>Use location</strong> to estimate your market.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Scores &amp; Refreshing</h2>
+        <p>
+          Gridiron Guide updates live game status automatically. You can also tap
+          <strong>Refresh</strong> to request the latest current-week game data.
+        </p>
+        <p>
+          Final-game information may be cached on your device to improve startup speed.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Provider Links</h2>
+        <p>
+          Gridiron Guide does not host or stream games. Watch links open legitimate
+          third-party provider apps or websites. Availability and deep-link behavior
+          can vary by device, provider, account, and region.
+        </p>
+      </article>
+    </section>
+
+    <section id="faq" class="card faq">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>Does Gridiron Guide stream NFL games?</summary>
+        <p>
+          No. Gridiron Guide is a schedule, score, and viewing guide. It helps you
+          identify where a game is available and can open supported third-party
+          apps or websites.
+        </p>
+      </details>
+
+      <details>
+        <summary>Why does a game show a different local network than I expected?</summary>
+        <p>
+          Local broadcast availability can vary by market. Confirm your ZIP code or
+          use the optional location feature in Settings to identify your local TV market.
+        </p>
+      </details>
+
+      <details>
+        <summary>Why did a Watch button open a provider homepage instead of the exact game?</summary>
+        <p>
+          Some providers support direct game links while others only expose a general
+          app or website destination. Gridiron Guide uses the most specific supported
+          link available and may fall back to the provider's main destination.
+        </p>
+      </details>
+
+      <details>
+        <summary>Why are fantasy leaders unavailable for a game?</summary>
+        <p>
+          Fantasy leader information depends on player statistics returned by the
+          game-data provider. It is shown for live and final games when the required
+          statistics are available.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does Gridiron Guide require location access?</summary>
+        <p>
+          No. Location access is optional and only requested after you choose
+          <strong>Use location</strong> in Settings. You can enter a ZIP code instead.
+        </p>
+      </details>
+
+      <details>
+        <summary>What should I include in a support request?</summary>
+        <p>
+          Please include your device model, iOS version, Gridiron Guide version,
+          the game or provider involved, and a short description of what happened.
+          A screenshot can also be helpful.
+        </p>
+      </details>
+    </section>
+
+    <section class="card contact">
+      <strong>Still need help?</strong>
+      <p>Contact the developer and include as much detail as possible.</p>
+
+      <!-- Replace YOUR_EMAIL@example.com before publishing -->
+      <a class="btn primary" href="mailto:YOUR_EMAIL@example.com?subject=Gridiron%20Guide%20Support">Email Support</a>
+
+      <p style="margin-top:14px;font-size:.82rem;">
+        Before publishing, replace:
+        <code>YOUR_EMAIL@example.com</code>
+        with your real support email address.
+      </p>
+    </section>
+
+    <div class="note">
+      <strong>About Gridiron Guide:</strong>
+      Gridiron Guide is an independent viewing guide and is not affiliated with or
+      endorsed by the NFL or the third-party networks and streaming services referenced
+      in the app.
+    </div>
+
+    <footer>
+      © 2026 Matthew Krystek · Gridiron Guide
+    </footer>
+  </main>
+</body>
+</html>
