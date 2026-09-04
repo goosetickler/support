@@ -4,14 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#070a12" />
-  <meta name="description" content="Gridiron Guide support, FAQs, troubleshooting, and contact information." />
-  <title>Gridiron Guide Support</title>
+  <meta name="description" content="Gridiron Guide support, FAQs, troubleshooting, and privacy policy." />
+  <title>Gridiron Guide Support & Privacy</title>
 
   <style>
     :root{
       --bg:#070a12;
       --panel:#0f1624;
-      --panel-2:#121c2d;
       --text:#f7f9ff;
       --muted:#aab4c8;
       --line:rgba(255,255,255,.12);
@@ -22,9 +21,7 @@
     }
 
     *{box-sizing:border-box}
-
     html{scroll-behavior:smooth}
-
     body{
       margin:0;
       min-height:100vh;
@@ -79,14 +76,19 @@
 
     h2{
       margin:0 0 10px;
-      font-size:1.05rem;
+      font-size:1.08rem;
       letter-spacing:-.01em;
+    }
+
+    h3{
+      margin:18px 0 7px;
+      font-size:.94rem;
     }
 
     p{margin:0 0 12px}
 
     .hero-copy{
-      max-width:680px;
+      max-width:700px;
       color:var(--muted);
       font-size:1rem;
     }
@@ -137,17 +139,11 @@
       box-shadow:0 12px 36px rgba(0,0,0,.18);
     }
 
-    .card p,
-    .card li{color:var(--muted)}
+    .card p,.card li{color:var(--muted)}
+    .card ul{margin:8px 0 0;padding-left:20px}
 
-    .card ul{
-      margin:8px 0 0;
-      padding-left:20px;
-    }
-
-    .faq{
-      margin-top:16px;
-    }
+    .faq,.privacy,.contact{margin-top:16px}
+    .privacy{scroll-margin-top:18px}
 
     details{
       border-top:1px solid var(--line);
@@ -162,9 +158,24 @@
       color:var(--text);
     }
 
-    details p{
-      margin:9px 0 0;
-      color:var(--muted);
+    details p{margin:9px 0 0;color:var(--muted)}
+
+    .privacy-section{
+      border-top:1px solid var(--line);
+      padding-top:16px;
+      margin-top:16px;
+    }
+
+    .privacy-section:first-of-type{
+      border-top:0;
+      padding-top:0;
+      margin-top:0;
+    }
+
+    .updated{
+      color:#7f899d;
+      font-size:.76rem;
+      margin-bottom:16px;
     }
 
     .note{
@@ -177,27 +188,8 @@
       font-size:.88rem;
     }
 
-    .contact{
-      margin-top:16px;
-      text-align:center;
-      padding:24px 18px;
-    }
-
-    .contact strong{
-      display:block;
-      margin-bottom:4px;
-      font-size:1.05rem;
-    }
-
-    .contact code{
-      display:inline-block;
-      margin-top:8px;
-      padding:5px 8px;
-      border-radius:8px;
-      color:#fff;
-      background:rgba(255,255,255,.07);
-      border:1px solid var(--line);
-    }
+    .contact{text-align:center;padding:24px 18px}
+    .contact strong{display:block;margin-bottom:4px;font-size:1.05rem}
 
     footer{
       margin-top:22px;
@@ -217,16 +209,17 @@
 <body>
   <main class="wrap">
     <section class="hero">
-      <div class="eyebrow">Support</div>
+      <div class="eyebrow">Support & Privacy</div>
       <h1 class="brand"><span>GRIDIRON</span><span class="guide"> GUIDE</span></h1>
       <p class="hero-copy">
-        Need help with Gridiron Guide? Find answers to common questions below,
-        troubleshoot local broadcast detection, or contact the developer for support.
+        Get help with Gridiron Guide, find answers to common questions,
+        or review the app's privacy policy.
       </p>
 
       <div class="actions">
         <a class="btn primary" href="mailto:mkrystek@gmail.com?subject=Gridiron%20Guide%20Support">Contact Support</a>
-        <a class="btn secondary" href="#faq">View FAQs</a>
+        <a class="btn secondary" href="#faq">FAQs</a>
+        <a class="btn secondary" href="#privacy">Privacy Policy</a>
       </div>
     </section>
 
@@ -237,21 +230,16 @@
           Gridiron Guide shows known TV networks and streaming providers for NFL games.
           Tap <strong>Watch</strong> to open a supported provider app or website when available.
         </p>
-        <p>
-          Provider access may require a separate subscription, TV package, or account.
-        </p>
+        <p>Provider access may require a separate subscription, TV package, or account.</p>
       </article>
 
       <article class="card">
         <h2>Local TV Market</h2>
         <p>
           Local CBS and FOX availability can depend on your TV market.
-          Open <strong>Settings → Location &amp; DIRECTV</strong> and either:
+          Open <strong>Settings → Location &amp; DIRECTV</strong> and either enter your
+          5-digit ZIP code or tap <strong>Use location</strong>.
         </p>
-        <ul>
-          <li>Enter your 5-digit ZIP code, or</li>
-          <li>Tap <strong>Use location</strong> to estimate your market.</li>
-        </ul>
       </article>
 
       <article class="card">
@@ -260,17 +248,15 @@
           Gridiron Guide updates live game status automatically. You can also tap
           <strong>Refresh</strong> to request the latest current-week game data.
         </p>
-        <p>
-          Final-game information may be cached on your device to improve startup speed.
-        </p>
+        <p>Final-game information may be cached on your device to improve startup speed.</p>
       </article>
 
       <article class="card">
         <h2>Provider Links</h2>
         <p>
           Gridiron Guide does not host or stream games. Watch links open legitimate
-          third-party provider apps or websites. Availability and deep-link behavior
-          can vary by device, provider, account, and region.
+          third-party provider apps or websites. Availability can vary by device,
+          provider, account, subscription, and region.
         </p>
       </article>
     </section>
@@ -282,9 +268,8 @@
       <details>
         <summary>Does Gridiron Guide stream NFL games?</summary>
         <p>
-          No. Gridiron Guide is a schedule, score, and viewing guide. It helps you
-          identify where a game is available and can open supported third-party
-          apps or websites.
+          No. Gridiron Guide is a schedule, score, and viewing guide. It helps identify
+          where a game is available and can open supported third-party apps or websites.
         </p>
       </details>
 
@@ -297,9 +282,9 @@
       </details>
 
       <details>
-        <summary>Why did a Watch button open a provider homepage instead of the exact game?</summary>
+        <summary>Why did Watch open a provider homepage instead of the exact game?</summary>
         <p>
-          Some providers support direct game links while others only expose a general
+          Some providers support direct game links while others expose only a general
           app or website destination. Gridiron Guide uses the most specific supported
           link available and may fall back to the provider's main destination.
         </p>
@@ -317,27 +302,120 @@
       <details>
         <summary>Does Gridiron Guide require location access?</summary>
         <p>
-          No. Location access is optional and only requested after you choose
-          <strong>Use location</strong> in Settings. You can enter a ZIP code instead.
-        </p>
-      </details>
-
-      <details>
-        <summary>What should I include in a support request?</summary>
-        <p>
-          Please include your device model, iOS version, Gridiron Guide version,
-          the game or provider involved, and a short description of what happened.
-          A screenshot can also be helpful.
+          No. Location access is optional and is only requested after you choose
+          <strong>Use location</strong> in Settings. You may enter a ZIP code instead.
         </p>
       </details>
     </section>
 
+    <section id="privacy" class="card privacy">
+      <div class="eyebrow">Privacy Policy</div>
+      <h2>Gridiron Guide Privacy Policy</h2>
+      <div class="updated">Last updated: September 4, 2026</div>
+
+      <div class="privacy-section">
+        <h3>Overview</h3>
+        <p>
+          Gridiron Guide is designed to work without user accounts, advertising,
+          analytics SDKs, or a developer-operated backend. The developer does not
+          collect, sell, or use personal information for advertising or tracking.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Location and ZIP Code</h3>
+        <p>
+          Location access is optional. Gridiron Guide requests location only after
+          you choose <strong>Use location</strong> in Settings. Approximate coordinates
+          are used on your device to estimate your local television market.
+        </p>
+        <p>
+          If you enter a ZIP code, it is used on your device to determine an estimated
+          television market. Your saved ZIP code, estimated market, and related cached
+          settings may be stored locally on your device so the app does not need to
+          repeat the lookup on every launch.
+        </p>
+        <p>
+          Gridiron Guide does not send your precise location or ZIP code to the developer.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Game and Reference Data</h3>
+        <p>
+          The app connects to third-party internet services to retrieve public NFL
+          schedule, score, player-statistics, broadcast, and market-reference data.
+          These requests are used to provide the app's core functionality.
+        </p>
+        <p>
+          As with normal internet connections, the third-party service receiving a
+          request may receive technical network information such as an IP address
+          according to that service's own privacy practices. Gridiron Guide does not
+          operate those services and does not receive or store their server logs.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Local Storage</h3>
+        <p>
+          Gridiron Guide stores certain preferences and cached app data locally on
+          your device. This can include provider preferences, favorite teams, schedule
+          and score caches, final-game fantasy leaders, ZIP/market settings, and other
+          settings needed to make the app faster and preserve your choices.
+        </p>
+        <p>
+          This locally stored information is not used by the developer for advertising,
+          profiling, or cross-app tracking.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Third-Party Apps and Websites</h3>
+        <p>
+          When you tap a Watch button or other provider link, Gridiron Guide may open
+          a third-party app or website such as a television network or streaming service.
+          Once you leave Gridiron Guide, that third party's terms and privacy policy apply.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Analytics, Advertising, and Tracking</h3>
+        <p>
+          Gridiron Guide does not include advertising SDKs, third-party analytics SDKs,
+          or cross-app tracking technology in the current version.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Children's Privacy</h3>
+        <p>
+          Gridiron Guide does not knowingly collect personal information from children.
+          The app does not require an account or user profile.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Changes to This Policy</h3>
+        <p>
+          This policy may be updated if Gridiron Guide's features or data practices
+          change. The "Last updated" date above will be revised when material changes
+          are made.
+        </p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>Contact</h3>
+        <p>
+          Questions about this privacy policy or Gridiron Guide can be sent to
+          <a href="mailto:mkrystek@gmail.com">mkrystek@gmail.com</a>.
+        </p>
+      </div>
+    </section>
+
     <section class="card contact">
       <strong>Still need help?</strong>
-      <p>Contact the developer and include as much detail as possible.</p>
-
+      <p>Contact the developer and include your device model, iOS version, and a description of the issue.</p>
       <a class="btn primary" href="mailto:mkrystek@gmail.com?subject=Gridiron%20Guide%20Support">Email Support</a>
-
     </section>
 
     <div class="note">
